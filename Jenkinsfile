@@ -1,13 +1,13 @@
 pipeline {
     agent any
     stages {
-        stage('安装依赖') {
+        stage('install') {
             steps {
                 sh 'yarn'
             }
         }
 
-        stage('打包') {
+        stage('build') {
             steps {
                 sh 'yarn run build'
             }
