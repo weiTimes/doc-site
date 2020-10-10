@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "rsync": "^0.6.1",
-    "shelljs": "^0.8.4"
+    "shelljs": "^0.8.4",
+    "vuepress": "^1.6.0"
   },
   "devDependencies": {
     "colors": "^1.4.0",
