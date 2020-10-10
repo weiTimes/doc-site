@@ -1,9 +1,15 @@
 pipeline {
     agent any
     stages {
-        stage('Stage 1') {
+        stage('安装依赖') {
             steps {
-                echo 'Hello World pipeline'
+                sh 'yarn'
+            }
+        }
+
+        stage('打包') {
+            steps {
+                sh 'yarn run build'
             }
         }
     }
