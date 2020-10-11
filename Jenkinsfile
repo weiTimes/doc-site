@@ -13,9 +13,7 @@ pipeline {
         stage('release') {
             steps {
                 echo '上传到服务器'
-                sshagent(['km-test-credentials']) {
-                    sh 'scp .vuepress/dist root@121.41.16.183:data/www'
-                }
+                sh 'scp .vuepress/dist root@121.41.16.183:data/www'
             }
         }
     }
