@@ -14,7 +14,7 @@ pipeline {
             steps {
                 echo '上传到服务器'
                 sshagent(['km-test-credentials']) {
-                    sh 'ssh -o StrictHostKeyChecking=no root@121.41.16.183'
+                    sh 'scp .vuepress/dist root@121.41.16.183:data/www'
                 }
             }
         }
