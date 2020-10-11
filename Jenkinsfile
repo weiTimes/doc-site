@@ -10,5 +10,13 @@ pipeline {
                 }
             }
         }
+        stage('release') {
+            steps {
+                echo '上传到服务器'
+                sshagent(['km-test-credentials']) {
+                    sh 'ssh -o StrictHostKeyChecking=no root@121.41.16.183'
+                }
+            }
+        }
     }
 }
